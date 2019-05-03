@@ -51,6 +51,22 @@ namespace Advanced_Lesson_1_OOP
         public int Tank { get; set; }
         public float Fuel { get; set; }
         public float FuelUsage { get; set; }
+        public static bool operator<( FuelCar fuelcar1, FuelCar fuelcar2)
+        {
+            return fuelcar1.Engine < fuelcar2.Engine;
+        }
+        public static bool operator >(FuelCar fuelcar1, FuelCar fuelcar2)
+        {
+            return fuelcar1.Engine > fuelcar2.Engine;
+        }
+        public static bool operator ==(FuelCar fuelcar1, FuelCar fuelcar2)
+        {
+            return fuelcar1.Engine == fuelcar2.Engine;
+        }
+        public static bool operator !=(FuelCar fuelcar1, FuelCar fuelcar2)
+        {
+            return fuelcar1.Engine != fuelcar2.Engine;
+        }
 
         public override void Move(float km)
         {
